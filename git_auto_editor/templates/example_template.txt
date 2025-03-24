@@ -1,0 +1,15 @@
+CONDITION:import os
+FILES:*.py
+FROM:
+def old_function():
+    pass
+TO:
+def new_function():
+    print("updated")
+---
+FILES:*.md
+FROM:REGEX:##\s+Old\s+Section
+TO:## New Section
+---
+FROM:SimpleWord
+TO:NewWord
